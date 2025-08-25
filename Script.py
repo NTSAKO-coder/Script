@@ -12,8 +12,8 @@ PROJECT_ID = "lic-dev-dmt-dat-sci"
 LOCATION = "us-central1"
 MODEL_NAME = "gemini-2.5-flash" 
 
-PDF_FOLDER_PATH = r"C:\\Users\\Ntsakom\\Downloads\\Test"
-OUTPUT_FILE_PATH = r"C:\Users\Ntsakom\Downloads\DataA.csv"
+PDF_FOLDER_PATH = r"C:\\Users\\Ntsakom\\OneDrive - Lombard Insurance\\Desktop\\GIT Reports"
+OUTPUT_FILE_PATH = r"C:\\Users\\Ntsakom\\Downloads\\DataB.csv"
 
 os.makedirs(os.path.dirname(OUTPUT_FILE_PATH), exist_ok=True)
 
@@ -52,7 +52,7 @@ Field definitions:
 - PolicyType: Type of insurance policy.Only take the pilocyType and ignore things like e.g "GIT:"
 - Incident: Brief description of the incident type.
 - Load: Description of the goods (e.g., "Tomatoes", "Electronics").
-- Loading: Weight of the load in kilograms. Must always include "kg" at the end (e.g., "5000 kg").Or give the summary given of why it's not there if not there(can be an explanation of why it's not there).
+- Loading: Weight of the load in kilograms. Must always include "kg" at the end (e.g., "5000 kg").Sometimes it can be an estimation, take the estimated kg.Or give the summary given of why it's not there if not there(can be an explanation of why it's not there).
 - DateOfLoss: The date of the loss incident. Normalize to YYYY-MM-DD (e.g., "2023-10-26"). May appear as "Date of Loss" or "bi".If not a date extract what's there(can be an explanation of why it's not there).
 - Location: The geographic location where the incident occurred.
 - ClaimCalculationTotal: The final calculated monetary value of the claim. Must be in Rand (R) format (e.g., "R 123,456.78"). May appear as "Calculation Final Value" or "Claim Total".If not there extract what's there(can be an explanation of why it's not there or it can be e.g "NONE").
